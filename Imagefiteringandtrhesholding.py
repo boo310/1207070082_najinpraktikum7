@@ -115,11 +115,11 @@ img = cv2.imread('pinguin.jpg',0)
 # Hitungan threshold. 
 # Perhatikan nilai ambang batas bawah dan atas dari tiap fungsi 
 # yang diberikan
-ret,thresh1 = cv2.threshold(img,127,255,cv2.THRESH_BINARY)
-ret,thresh2 = cv2.threshold(img,127,255,cv2.THRESH_BINARY_INV)
-ret,thresh3 = cv2.threshold(img,127,255,cv2.THRESH_TRUNC)
-ret,thresh4 = cv2.threshold(img,127,255,cv2.THRESH_TOZERO)
-ret,thresh5 = cv2.threshold(img,127,255,cv2.THRESH_TOZERO_INV)
+ret,thresh1 = cv2.threshold(img,150,255,cv2.THRESH_BINARY)
+ret,thresh2 = cv2.threshold(img,110,255,cv2.THRESH_BINARY_INV)
+ret,thresh3 = cv2.threshold(img,100,255,cv2.THRESH_TRUNC)
+ret,thresh4 = cv2.threshold(img,122,255,cv2.THRESH_TOZERO)
+ret,thresh5 = cv2.threshold(img,180,255,cv2.THRESH_TOZERO_INV)
 
 # menampilkan hasil
 titles = ['Gambar asli','BINARY','BINARY_INV','TRUNC','TOZERO','TOZERO_INV']
@@ -142,7 +142,7 @@ img = cv2.medianBlur(img,5)
 
 # Lakukan Thresholding
 # Binary Threshold
-ret,th1 = cv2.threshold(img,127,255,cv2.THRESH_BINARY)
+ret,th1 = cv2.threshold(img,150,255,cv2.THRESH_BINARY)
 
 # Adaptive Threshold dengan Mean
 th2 = cv2.adaptiveThreshold(img,255,cv2.ADAPTIVE_THRESH_MEAN_C,\
